@@ -10,32 +10,38 @@
 .container {
     width: 100%;
     height: 100vh;
-    background-color: #e3f9ff;
+    /* background: linear-gradient(90deg, lightblue, cyan); */
+    background-image: url('op.png');
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .calculator {
-    background-color: #3a4452;
-    padding: 20px;
-    border-radius: 10px;
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(1px);
+    padding: 5px;
+    border: 2px solid rgba(255,255,255,0.5);
 }
 
 .calculator form input {
-    border: 0;
+    border: 2px solid rgba(255,255,255,0.5);
     outline: 0;
-    width: 60px;
+    width: 75px;
     height: 60px;
-    border-radius: 10px;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
-    background-color: transparent;
+    background-color: rgba(255,255,255,0.5);
     font-size: 20px;
-    color: #fff;
+    color: black;
     cursor: pointer;
-    margin: 10px;
+    font-weight: bolder;
+    margin: 2px 0px;
 }
-
+.calculator form .buttons input:hover{
+    background-color: transparent;
+}
+.calculator form .buttons input:active{
+    background-color: rgba(130, 184, 130, 0.8)
+}
 form .display {
     display: flex;
     justify-content: flex-end;
@@ -43,21 +49,21 @@ form .display {
 }
 
 form .display input {
+    border: 0;
     text-align: right;
     flex: 1;
     font-size: 45px;
     box-shadow: none;
+    background-color: transparent;
 }
 
 form .display input::-webkit-input-placeholder {
-    color: white;
+    color: black;
     opacity: 1;
 }
 
-form input.equal {
-    width: 145px;
-}
 
 form input.operator {
-    color: #33ffd8;
+    background-color: rgba(255,255,255,0.1);
+    font-weight: lighter;
 }
